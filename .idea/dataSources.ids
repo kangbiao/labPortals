@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - onethink@localhost" uuid="1c04fae2-68f5-423a-bc1e-c8213cd046c2">
+    <database-info product="MySQL" version="5.5.43-0ubuntu0.14.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="onethink"/>
+    <table name="ot_action" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5Li76ZSu" autoIncrement="true"/>
+      <column name="name" sqlType="CHAR" precision="30" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="6KGM5Li65ZSv5LiA5qCH6K+G"/>
+      <column name="title" sqlType="CHAR" precision="80" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="6KGM5Li66K+05piO"/>
+      <column name="remark" sqlType="CHAR" precision="140" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="6KGM5Li65o+P6L+w"/>
+      <column name="rule" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="6KGM5Li66KeE5YiZ"/>
+      <column name="log" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="5pel5b+X6KeE5YiZ"/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="57G75Z6L"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="54q25oCB"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5L+u5pS55pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ot_action_log" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5Li76ZSu" autoIncrement="true"/>
+      <column name="action_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="6KGM5Li6aWQ="/>
+      <column name="user_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5omn6KGM55So5oi3aWQ="/>
+      <column name="action_ip" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" remarks="5omn6KGM6KGM5Li66ICFaXA="/>
+      <column name="model" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6Kem5Y+R6KGM5Li655qE6KGo"/>
+      <column name="record_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="6Kem5Y+R6KGM5Li655qE5pWw5o2uaWQ="/>
+      <column name="remark" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5pel5b+X5aSH5rOo"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="54q25oCB"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5omn6KGM6KGM5Li655qE5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="action_id_ix" unique="false" columns="action_id"/>
+      <index name="action_ip_ix" unique="false" columns="action_ip"/>
+      <index name="user_id_ix" unique="false" columns="user_id"/>
+    </table>
+    <table name="ot_addons" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5Li76ZSu" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12" remarks="5o+S5Lu25ZCN5oiW5qCH6K+G"/>
+      <column name="title" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5Lit5paH5ZCN"/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="5o+S5Lu25o+P6L+w"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="54q25oCB"/>
+      <column name="config" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="6YWN572u"/>
+      <column name="author" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="5L2c6ICF"/>
+      <column name="version" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="54mI5pys5Y+3"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5a6J6KOF5pe26Ze0"/>
+      <column name="has_adminlist" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5piv5ZCm5pyJ5ZCO5Y+w5YiX6KGo"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ot_attachment" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="55So5oi3SUQ="/>
+      <column name="title" sqlType="CHAR" precision="30" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="6ZmE5Lu25pi+56S65ZCN"/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="6ZmE5Lu257G75Z6L"/>
+      <column name="source" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="6LWE5rqQSUQ="/>
+      <column name="record_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5YWz6IGU6K6w5b2VSUQ="/>
+      <column name="download" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5LiL6L295qyh5pWw"/>
+      <column name="size" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="6ZmE5Lu25aSn5bCP"/>
+      <column name="dir" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5LiK57qn55uu5b2VSUQ="/>
+      <column name="sort" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5o6S5bqP"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pu05paw5pe26Ze0"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="54q25oCB"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="idx_record_status" unique="false" columns="record_id,status"/>
+    </table>
+    <table name="ot_attribute" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5a2X5q615ZCN"/>
+      <column name="title" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5a2X5q615rOo6YeK"/>
+      <column name="field" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5a2X5q615a6a5LmJ"/>
+      <column name="type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5pWw5o2u57G75Z6L"/>
+      <column name="value" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5a2X5q616buY6K6k5YC8"/>
+      <column name="remark" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5aSH5rOo"/>
+      <column name="is_show" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="5piv5ZCm5pi+56S6"/>
+      <column name="extra" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5Y+C5pWw"/>
+      <column name="model_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5qih5Z6LaWQ="/>
+      <column name="is_must" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5piv5ZCm5b+F5aGr"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="54q25oCB"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pu05paw5pe26Ze0"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="validate_rule" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="validate_time" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="error_info" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="validate_type" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="auto_rule" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="auto_time" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="auto_type" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="model_id" unique="false" columns="model_id"/>
+    </table>
+    <table name="ot_auth_extend" schema="" catalog="onethink" type="TABLE">
+      <column name="group_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" remarks="55So5oi3aWQ="/>
+      <column name="extend_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" remarks="5omp5bGV6KGo5Lit5pWw5o2u55qEaWQ="/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" remarks="5omp5bGV57G75Z6L5qCH6K+GIDE65qCP55uu5YiG57G75p2D6ZmQOzI65qih5Z6L5p2D6ZmQ"/>
+      <index name="group_extend_type" unique="true" columns="group_id,extend_id,type"/>
+      <index name="group_id" unique="false" columns="extend_id"/>
+      <index name="uid" unique="false" columns="group_id"/>
+    </table>
+    <table name="ot_auth_group" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" remarks="55So5oi357uEaWQs6Ieq5aKe5Li76ZSu" autoIncrement="true"/>
+      <column name="module" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="55So5oi357uE5omA5bGe5qih5Z2X"/>
+      <column name="type" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="57uE57G75Z6L"/>
+      <column name="title" sqlType="CHAR" precision="20" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="55So5oi357uE5Lit5paH5ZCN56ew"/>
+      <column name="description" sqlType="VARCHAR" precision="80" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5o+P6L+w5L+h5oGv"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="55So5oi357uE54q25oCB77ya5Li6Meato+W4uO+8jOS4ujDnpoHnlKgsLTHkuLrliKDpmaQ="/>
+      <column name="rules" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="55So5oi357uE5oul5pyJ55qE6KeE5YiZaWTvvIzlpJrkuKrop4TliJkgLCDpmpTlvIA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ot_auth_group_access" schema="" catalog="onethink" type="TABLE">
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="55So5oi3aWQ="/>
+      <column name="group_id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" remarks="55So5oi357uEaWQ="/>
+      <index name="uid_group_id" unique="true" columns="uid,group_id"/>
+      <index name="group_id" unique="false" columns="group_id"/>
+      <index name="uid" unique="false" columns="uid"/>
+    </table>
+    <table name="ot_auth_rule" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="MEDIUMINT UNSIGNED" precision="8" scale="0" nullable="false" jdbcType="4" remarks="6KeE5YiZaWQs6Ieq5aKe5Li76ZSu" autoIncrement="true"/>
+      <column name="module" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" remarks="6KeE5YiZ5omA5bGebW9kdWxl"/>
+      <column name="type" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="MS11cmw7Mi3kuLvoj5zljZU="/>
+      <column name="name" sqlType="CHAR" precision="80" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="6KeE5YiZ5ZSv5LiA6Iux5paH5qCH6K+G"/>
+      <column name="title" sqlType="CHAR" precision="20" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="6KeE5YiZ5Lit5paH5o+P6L+w"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="5piv5ZCm5pyJ5pWIKDA65peg5pWILDE65pyJ5pWIKQ=="/>
+      <column name="condition" sqlType="VARCHAR" precision="300" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6KeE5YiZ6ZmE5Yqg5p2h5Lu2"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="module" unique="false" columns="module,status,type"/>
+    </table>
+    <table name="ot_category" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5YiG57G7SUQ=" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12" remarks="5qCH5b+X"/>
+      <column name="title" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" remarks="5qCH6aKY"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5LiK57qn5YiG57G7SUQ="/>
+      <column name="sort" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5o6S5bqP77yI5ZCM57qn5pyJ5pWI77yJ"/>
+      <column name="list_row" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MTA=" remarks="5YiX6KGo5q+P6aG16KGM5pWw"/>
+      <column name="meta_title" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="U0VP55qE572R6aG15qCH6aKY"/>
+      <column name="keywords" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5YWz6ZSu5a2X"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5o+P6L+w"/>
+      <column name="template_index" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6aKR6YGT6aG15qih5p2/"/>
+      <column name="template_lists" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5YiX6KGo6aG15qih5p2/"/>
+      <column name="template_detail" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6K+m5oOF6aG15qih5p2/"/>
+      <column name="template_edit" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="57yW6L6R6aG15qih5p2/"/>
+      <column name="model" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5YiX6KGo57uR5a6a5qih5Z6L"/>
+      <column name="model_sub" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5a2Q5paH5qGj57uR5a6a5qih5Z6L"/>
+      <column name="type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5YWB6K645Y+R5biD55qE5YaF5a6557G75Z6L"/>
+      <column name="link_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5aSW6ZO+"/>
+      <column name="allow_publish" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5piv5ZCm5YWB6K645Y+R5biD5YaF5a65"/>
+      <column name="display" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5Y+v6KeB5oCn"/>
+      <column name="reply" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5piv5ZCm5YWB6K645Zue5aSN"/>
+      <column name="check" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5Y+R5biD55qE5paH56ug5piv5ZCm6ZyA6KaB5a6h5qC4"/>
+      <column name="reply_model" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="extend" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="5omp5bGV6K6+572u"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pu05paw5pe26Ze0"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5pWw5o2u54q25oCB"/>
+      <column name="icon" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5YiG57G75Zu+5qCH"/>
+      <column name="groups" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5YiG57uE5a6a5LmJ"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="uk_name" unique="true" columns="name"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="ot_channel" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6aKR6YGTSUQ=" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5LiK57qn6aKR6YGTSUQ="/>
+      <column name="title" sqlType="CHAR" precision="30" scale="0" nullable="false" jdbcType="1" remarks="6aKR6YGT5qCH6aKY"/>
+      <column name="url" sqlType="CHAR" precision="100" scale="0" nullable="false" jdbcType="1" remarks="6aKR6YGT6L+e5o6l"/>
+      <column name="sort" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5a+86Iiq5o6S5bqP"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pu05paw5pe26Ze0"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="54q25oCB"/>
+      <column name="target" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5paw56qX5Y+j5omT5byA"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="ot_config" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6YWN572uSUQ=" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6YWN572u5ZCN56ew"/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="6YWN572u57G75Z6L"/>
+      <column name="title" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6YWN572u6K+05piO"/>
+      <column name="group" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="6YWN572u5YiG57uE"/>
+      <column name="extra" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6YWN572u5YC8"/>
+      <column name="remark" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6YWN572u6K+05piO"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pu05paw5pe26Ze0"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="54q25oCB"/>
+      <column name="value" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="6YWN572u5YC8"/>
+      <column name="sort" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="5o6S5bqP"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="uk_name" unique="true" columns="name"/>
+      <index name="group" unique="false" columns="group"/>
+      <index name="type" unique="false" columns="type"/>
+    </table>
+    <table name="ot_document" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5paH5qGjSUQ=" autoIncrement="true"/>
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="55So5oi3SUQ="/>
+      <column name="name" sqlType="CHAR" precision="40" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5qCH6K+G"/>
+      <column name="title" sqlType="CHAR" precision="80" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5qCH6aKY"/>
+      <column name="category_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5omA5bGe5YiG57G7"/>
+      <column name="group_id" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" remarks="5omA5bGe5YiG57uE"/>
+      <column name="description" sqlType="CHAR" precision="140" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5o+P6L+w"/>
+      <column name="root" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5qC56IqC54K5"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5omA5bGeSUQ="/>
+      <column name="model_id" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5YaF5a655qih5Z6LSUQ="/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="Mg==" remarks="5YaF5a6557G75Z6L"/>
+      <column name="position" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA==" remarks="5o6o6I2Q5L2N"/>
+      <column name="link_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5aSW6ZO+"/>
+      <column name="cover_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5bCB6Z2i"/>
+      <column name="display" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="5Y+v6KeB5oCn"/>
+      <column name="deadline" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5oiq6Iez5pe26Ze0"/>
+      <column name="attach" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="6ZmE5Lu25pWw6YeP"/>
+      <column name="view" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5rWP6KeI6YeP"/>
+      <column name="comment" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="6K+E6K665pWw"/>
+      <column name="extend" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5omp5bGV57uf6K6h5a2X5q61"/>
+      <column name="level" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5LyY5YWI57qn"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pu05paw5pe26Ze0"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5pWw5o2u54q25oCB"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="idx_category_status" unique="false" columns="category_id,status"/>
+      <index name="idx_status_type_pid" unique="false" columns="status,uid,pid"/>
+    </table>
+    <table name="ot_document_article" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5paH5qGjSUQ="/>
+      <column name="parse" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5YaF5a656Kej5p6Q57G75Z6L"/>
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="5paH56ug5YaF5a65"/>
+      <column name="template" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6K+m5oOF6aG15pi+56S65qih5p2/"/>
+      <column name="bookmark" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pS26JeP5pWw"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ot_document_download" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5paH5qGjSUQ="/>
+      <column name="parse" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5YaF5a656Kej5p6Q57G75Z6L"/>
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="5LiL6L296K+m57uG5o+P6L+w"/>
+      <column name="template" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6K+m5oOF6aG15pi+56S65qih5p2/"/>
+      <column name="file_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5paH5Lu2SUQ="/>
+      <column name="download" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5LiL6L295qyh5pWw"/>
+      <column name="size" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5paH5Lu25aSn5bCP"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ot_file" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5paH5Lu2SUQ=" autoIncrement="true"/>
+      <column name="name" sqlType="CHAR" precision="30" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5Y6f5aeL5paH5Lu25ZCN"/>
+      <column name="savename" sqlType="CHAR" precision="20" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5L+d5a2Y5ZCN56ew"/>
+      <column name="savepath" sqlType="CHAR" precision="30" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5paH5Lu25L+d5a2Y6Lev5b6E"/>
+      <column name="ext" sqlType="CHAR" precision="5" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5paH5Lu25ZCO57yA"/>
+      <column name="mime" sqlType="CHAR" precision="40" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5paH5Lu2bWltZeexu+Weiw=="/>
+      <column name="size" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5paH5Lu25aSn5bCP"/>
+      <column name="md5" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5paH5Lu2bWQ1"/>
+      <column name="sha1" sqlType="CHAR" precision="40" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5paH5Lu2IHNoYTHnvJbnoIE="/>
+      <column name="location" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5paH5Lu25L+d5a2Y5L2N572u"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6L+c56iL5Zyw5Z2A"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5LiK5Lyg5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="uk_md5" unique="true" columns="md5"/>
+    </table>
+    <table name="ot_hooks" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5Li76ZSu" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6ZKp5a2Q5ZCN56ew"/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="5o+P6L+w"/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="57G75Z6L"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pu05paw5pe26Ze0"/>
+      <column name="addons" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6ZKp5a2Q5oyC6L2955qE5o+S5Lu2ICfvvIwn5YiG5Ymy"/>
+      <column name="status" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="name" unique="true" columns="name"/>
+    </table>
+    <table name="ot_member" schema="" catalog="onethink" type="TABLE">
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="55So5oi3SUQ=" autoIncrement="true"/>
+      <column name="nickname" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5pi156ew"/>
+      <column name="sex" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5oCn5Yir"/>
+      <column name="birthday" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn" remarks="55Sf5pel"/>
+      <column name="qq" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="cXHlj7c="/>
+      <column name="score" sqlType="MEDIUMINT" precision="7" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="55So5oi356ev5YiG"/>
+      <column name="login" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="55m75b2V5qyh5pWw"/>
+      <column name="reg_ip" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5rOo5YaMSVA="/>
+      <column name="reg_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5rOo5YaM5pe26Ze0"/>
+      <column name="last_login_ip" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5pyA5ZCO55m75b2VSVA="/>
+      <column name="last_login_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pyA5ZCO55m75b2V5pe26Ze0"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5Lya5ZGY54q25oCB"/>
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="uid"/>
+      <index name="status" unique="false" columns="status"/>
+    </table>
+    <table name="ot_menu" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5paH5qGjSUQ=" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5qCH6aKY"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5LiK57qn5YiG57G7SUQ="/>
+      <column name="sort" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5o6S5bqP77yI5ZCM57qn5pyJ5pWI77yJ"/>
+      <column name="url" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="6ZO+5o6l5Zyw5Z2A"/>
+      <column name="hide" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5piv5ZCm6ZqQ6JeP"/>
+      <column name="tip" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5o+Q56S6"/>
+      <column name="group" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" def="Jyc=" remarks="5YiG57uE"/>
+      <column name="is_dev" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5piv5ZCm5LuF5byA5Y+R6ICF5qih5byP5Y+v6KeB"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="54q25oCB"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+      <index name="status" unique="false" columns="status"/>
+    </table>
+    <table name="ot_model" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5qih5Z6LSUQ=" autoIncrement="true"/>
+      <column name="name" sqlType="CHAR" precision="30" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5qih5Z6L5qCH6K+G"/>
+      <column name="title" sqlType="CHAR" precision="30" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5qih5Z6L5ZCN56ew"/>
+      <column name="extend" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="57un5om/55qE5qih5Z6L"/>
+      <column name="relation" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="57un5om/5LiO6KKr57un5om/5qih5Z6L55qE5YWz6IGU5a2X5q61"/>
+      <column name="need_pk" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ==" remarks="5paw5bu66KGo5pe25piv5ZCm6ZyA6KaB5Li76ZSu5a2X5q61"/>
+      <column name="field_sort" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="6KGo5Y2V5a2X5q615o6S5bqP"/>
+      <column name="field_group" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="JzE65Z+656GAJw==" remarks="5a2X5q615YiG57uE"/>
+      <column name="attribute_list" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="5bGe5oCn5YiX6KGo77yI6KGo55qE5a2X5q6177yJ"/>
+      <column name="attribute_alias" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5bGe5oCn5Yir5ZCN5a6a5LmJ"/>
+      <column name="template_list" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5YiX6KGo5qih5p2/"/>
+      <column name="template_add" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5paw5aKe5qih5p2/"/>
+      <column name="template_edit" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="57yW6L6R5qih5p2/"/>
+      <column name="list_grid" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="5YiX6KGo5a6a5LmJ"/>
+      <column name="list_row" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MTA=" remarks="5YiX6KGo5pWw5o2u6ZW/5bqm"/>
+      <column name="search_key" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6buY6K6k5pCc57Si5a2X5q61"/>
+      <column name="search_list" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6auY57qn5pCc57Si55qE5a2X5q61"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pu05paw5pe26Ze0"/>
+      <column name="status" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="54q25oCB"/>
+      <column name="engine_type" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12" def="J015SVNBTSc=" remarks="5pWw5o2u5bqT5byV5pOO"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ot_picture" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5Li76ZSuaWToh6rlop4=" autoIncrement="true"/>
+      <column name="path" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="6Lev5b6E"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5Zu+54mH6ZO+5o6l"/>
+      <column name="md5" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5paH5Lu2bWQ1"/>
+      <column name="sha1" sqlType="CHAR" precision="40" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5paH5Lu2IHNoYTHnvJbnoIE="/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="54q25oCB"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Yib5bu65pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ot_ucenter_admin" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="566h55CG5ZGYSUQ=" autoIncrement="true"/>
+      <column name="member_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="566h55CG5ZGY55So5oi3SUQ="/>
+      <column name="status" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="566h55CG5ZGY54q25oCB"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ot_ucenter_app" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="5bqU55SoSUQ=" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12" remarks="5bqU55So5ZCN56ew"/>
+      <column name="url" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" remarks="5bqU55SoVVJM"/>
+      <column name="ip" sqlType="CHAR" precision="15" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="5bqU55SoSVA="/>
+      <column name="auth_key" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5Yqg5a+GS0VZ"/>
+      <column name="sys_login" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5ZCM5q2l55m76ZmG"/>
+      <column name="allow_ip" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc=" remarks="5YWB6K646K6/6Zeu55qESVA="/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pu05paw5pe26Ze0"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="5bqU55So54q25oCB"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="status" unique="false" columns="status"/>
+    </table>
+    <table name="ot_ucenter_member" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="55So5oi3SUQ=" autoIncrement="true"/>
+      <column name="username" sqlType="CHAR" precision="16" scale="0" nullable="false" jdbcType="1" remarks="55So5oi35ZCN"/>
+      <column name="password" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1" remarks="5a+G56CB"/>
+      <column name="email" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1" remarks="55So5oi36YKu566x"/>
+      <column name="mobile" sqlType="CHAR" precision="15" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="55So5oi35omL5py6"/>
+      <column name="reg_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5rOo5YaM5pe26Ze0"/>
+      <column name="reg_ip" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5rOo5YaMSVA="/>
+      <column name="last_login_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pyA5ZCO55m75b2V5pe26Ze0"/>
+      <column name="last_login_ip" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA==" remarks="5pyA5ZCO55m75b2VSVA="/>
+      <column name="update_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5pu05paw5pe26Ze0"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA==" remarks="55So5oi354q25oCB"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="email" unique="true" columns="email"/>
+      <index name="username" unique="true" columns="username"/>
+      <index name="status" unique="false" columns="status"/>
+    </table>
+    <table name="ot_ucenter_setting" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6K6+572uSUQ=" autoIncrement="true"/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA==" remarks="6YWN572u57G75Z6L77yIMS3nlKjmiLfphY3nva7vvIk="/>
+      <column name="value" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1" remarks="6YWN572u5pWw5o2u"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="ot_url" schema="" catalog="onethink" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="6ZO+5o6l5ZSv5LiA5qCH6K+G" autoIncrement="true"/>
+      <column name="url" sqlType="CHAR" precision="255" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="6ZO+5o6l5Zyw5Z2A"/>
+      <column name="short" sqlType="CHAR" precision="100" scale="0" nullable="false" jdbcType="1" def="Jyc=" remarks="55+t572R5Z2A"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="Mg==" remarks="54q25oCB"/>
+      <column name="create_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA==" remarks="5Yib5bu65pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="idx_url" unique="true" columns="url"/>
+    </table>
+    <table name="ot_userdata" schema="" catalog="onethink" type="TABLE">
+      <column name="uid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="55So5oi3aWQ="/>
+      <column name="type" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="false" jdbcType="-6" remarks="57G75Z6L5qCH6K+G"/>
+      <column name="target_id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" remarks="55uu5qCHaWQ="/>
+      <index name="uid" unique="true" columns="uid,type,target_id"/>
+    </table>
+  </data-source>
+</component>

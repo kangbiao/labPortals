@@ -1,0 +1,102 @@
+[ 2015-07-11T15:23:42+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002125s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035018s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD /var/www/onethink/ThinkPHP/Library/Think/App.class.php 第 28 行.
+NOTIC: [8] Undefined index: REQUEST_URI /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 135 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 88 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 89 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 90 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 91 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 92 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 178 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+
+[ 2015-07-11T15:24:21+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001372s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002091s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD /var/www/onethink/ThinkPHP/Library/Think/App.class.php 第 28 行.
+NOTIC: [8] Undefined index: REQUEST_URI /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 135 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 88 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 89 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 90 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 91 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 92 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 178 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+
+[ 2015-07-11T15:24:35+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002321s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003080s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD /var/www/onethink/ThinkPHP/Library/Think/App.class.php 第 28 行.
+NOTIC: [8] Undefined index: REQUEST_URI /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 135 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 88 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 89 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 90 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 91 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 92 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 178 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+
+[ 2015-07-11T16:47:34+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001534s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002137s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD /var/www/onethink/ThinkPHP/Library/Think/App.class.php 第 28 行.
+NOTIC: [8] Undefined index: REQUEST_URI /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 135 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 88 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 89 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 90 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 91 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 92 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 178 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+
+[ 2015-07-11T16:57:52+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001094s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001492s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD /var/www/onethink/ThinkPHP/Library/Think/App.class.php 第 28 行.
+NOTIC: [8] Undefined index: REQUEST_URI /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 135 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 88 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 89 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 90 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 91 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 92 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 178 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+
+[ 2015-07-11T16:57:52+08:00 ]  
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001462s ]
+NOTIC: [8] Undefined index: REQUEST_METHOD /var/www/onethink/ThinkPHP/Library/Think/App.class.php 第 28 行.
+NOTIC: [8] Undefined index: REQUEST_URI /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 135 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 88 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 89 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 90 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 91 行.
+NOTIC: [8] Use of undefined constant __ROOT__ - assumed '__ROOT__' /var/www/onethink/Application/Admin/Conf/config.php 第 92 行.
+NOTIC: [8] Use of undefined constant _PHP_FILE_ - assumed '_PHP_FILE_' /var/www/onethink/ThinkPHP/Library/Think/Dispatcher.class.php 第 178 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+
