@@ -16,10 +16,9 @@ namespace Home\Controller;
 class ArticleController extends HomeController {
 
     /* 文档模型频道页 */
-	public function index(){
+	public function nav(){
 		/* 分类信息 */
 		$category = $this->category();
-
 		//频道页只显示模板，默认不读取任何内容
 		//内容可以通过模板标签自行定制
 
