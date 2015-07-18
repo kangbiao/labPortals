@@ -1,3 +1,5 @@
 ThinkPHP/
 Runtime/
 .idea/
+Application/Common/Conf/config.php
+Application/User/Conf/config.php
