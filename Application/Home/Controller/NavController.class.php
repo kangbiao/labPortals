@@ -17,23 +17,23 @@ class NavController extends HomeController {
 
     public function research()
     {
-//        $research=R("Article/category",array('id'=>'research_forward'));
-//        $Document = D('Document');
-//        $temp=$Document->lists($research['id']);
-//        foreach($temp as $v)
-//        {
-//            $list["research"][]=$Document->detail($v['id']);
-//        }
-//
-//        $patent=R("Article/category",array('id'=>'onlyOneDoc'));
-//        $temp=$Document->lists($patent['id']);
-//        foreach($temp as $v)
-//        {
-//            if($v['title']=="patent")
-//                $list['patent']=$Document->detail($v['id']);
-//        }
-//        dump($list);
-//        $this->assign("list",$list);
+        $research=R("Article/category",array('id'=>'research_forward'));
+        $Document = D('Document');
+        $temp=$Document->lists($research['id']);
+        foreach($temp as $v)
+        {
+            $list["research"][]=$Document->detail($v['id']);
+        }
+
+        $patent=R("Article/category",array('id'=>'onlyOneDoc'));
+        $temp=$Document->lists($patent['id']);
+        foreach($temp as $v)
+        {
+            if($v['title']=="patent")
+                $list['patent']=$Document->detail($v['id']);
+        }
+        dump($list);
+        $this->assign("list",$list);
         $this->display();
     }
 
