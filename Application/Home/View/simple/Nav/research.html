@@ -4,20 +4,22 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">研究1</a></li>
-                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">研究2</a></li>
-                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">研究3</a></li>
-                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">研究4</a></li>
+                <div class="col-md-2">
+                    <ul style="font-size: 15px" class="no-list-style">
+                        <li><a href="#1">研究方向</a></li>
+                        <li><a href="#2">获得专利</a></li>
                     </ul>
-
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="home">松德股份都是反反复复反反复复反反复复</div>
-                        <div role="tabpanel" class="tab-pane fade" id="profile">松德股份都是反反复复反反复复反反复复</div>
-                        <div role="tabpanel" class="tab-pane fade" id="messages">松德股份都是反反复复反反复复反反复复</div>
-                        <div role="tabpanel" class="tab-pane fade" id="settings">松德股份都是反反复复反反复复反反复复</div>
-                    </div>
+                </div>
+                <div class="col-md-10">
+                    <h2 id="1">研究方向</h2>
+                        <volist name="list['research']" id="research">
+                            {$research.detail}
+                        </volist>
+                    <br>
+                    <h2 id="2">获得专利</h2>
+                    <p>
+                        {$list['patent']['detail']}
+                    </p>
                 </div>
             </div>
         </div>

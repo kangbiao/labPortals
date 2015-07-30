@@ -42,6 +42,8 @@ class ArticleController extends HomeController {
 		/* 模板赋值并渲染模板 */
 		$this->assign('category', $category);
 		$this->assign('list', $list);
+//		dump($category);
+//		dump($list);
 		$this->display($category['template_lists']);
 	}
 
@@ -83,11 +85,12 @@ class ArticleController extends HomeController {
 		$this->assign('category', $category);
 		$this->assign('info', $info);
 		$this->assign('page', $p); //页码
-		$this->display($tmpl);
+		dump($info);
+//		$this->display($tmpl);
 	}
 
 	/* 文档分类检测 */
-	private function category($id = 0){
+	public function category($id = 0){
 		/* 标识正确性检测 */
 		$id = $id ? $id : I('get.category', 0);
 		if(empty($id)){

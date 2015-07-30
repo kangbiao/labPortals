@@ -25,8 +25,8 @@ class IndexController extends HomeController {
         $this->assign('category',$category);//栏目
         $this->assign('lists',$lists);//列表
         $this->assign('page',D('Document')->page);//分页
-        dump($category);
-//        $this->display    ();
+//        dump($category);
+        $this->display    ();
     }
 
 }
