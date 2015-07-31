@@ -292,7 +292,7 @@ class DocumentModel extends Model{
         $name  = parse_name(get_document_model($model, 'name'), 1);
         $class = is_file(MODULE_PATH . 'Logic/' . $name . 'Logic' . EXT) ? $name : 'Base';
         $class = MODULE_NAME . '\\Logic\\' . $class . 'Logic';
-        return new $class($name);  		
+        return new $class($name);
     }
 
     /**

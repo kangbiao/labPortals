@@ -32,7 +32,6 @@ class NavController extends HomeController {
             if($v['title']=="patent")
                 $list['patent']=$Document->detail($v['id']);
         }
-        dump($list);
         $this->assign("list",$list);
         $this->display();
     }
