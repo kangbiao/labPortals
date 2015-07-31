@@ -8,111 +8,12 @@
                 <h2>出版物</h2>
 
                 <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <a href="#"><img src="__IMG__/portfolio3.jpg" alt="Project Name"></a>
-                            </div>
-                            <div class="portfolio-info-fade">
-                                <ul>
-                                    <li class="portfolio-project-name">Project Name</li>
-                                    <li>Website design & Development</li>
-                                    <li>Client: Some Client LTD</li>
-                                    <li class="read-more"><a href="#" class="btn">Read more</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <a href="#"><img src="__IMG__/portfolio4.jpg" alt="Project Name"></a>
-                            </div>
-                            <div class="portfolio-info-fade">
-                                <ul>
-                                    <li class="portfolio-project-name">Project Name</li>
-                                    <li>Website design & Development</li>
-                                    <li>Client: Some Client LTD</li>
-                                    <li class="read-more"><a href="#" class="btn">Read more</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <a href="#"><img src="__IMG__/portfolio6.jpg" alt="Project Name"></a>
-                            </div>
-                            <div class="portfolio-info-fade">
-                                <ul>
-                                    <li class="portfolio-project-name">Project Name</li>
-                                    <li>Website design & Development</li>
-                                    <li>Client: Some Client LTD</li>
-                                    <li class="read-more"><a href="#" class="btn">Read more</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <a href="#"><img src="__IMG__/portfolio6.jpg" alt="Project Name"></a>
-                            </div>
-                            <div class="portfolio-info-fade">
-                                <ul>
-                                    <li class="portfolio-project-name">Project Name</li>
-                                    <li>Website design & Development</li>
-                                    <li>Client: Some Client LTD</li>
-                                    <li class="read-more"><a href="#" class="btn">Read more</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <a href="#"><img src="__IMG__/portfolio6.jpg" alt="Project Name"></a>
-                            </div>
-                            <div class="portfolio-info-fade">
-                                <ul>
-                                    <li class="portfolio-project-name">Project Name</li>
-                                    <li>Website design & Development</li>
-                                    <li>Client: Some Client LTD</li>
-                                    <li class="read-more"><a href="#" class="btn">Read more</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <a href="#"><img src="__IMG__/portfolio6.jpg" alt="Project Name"></a>
-                            </div>
-                            <div class="portfolio-info-fade">
-                                <ul>
-                                    <li class="portfolio-project-name">Project Name</li>
-                                    <li>Website design & Development</li>
-                                    <li>Client: Some Client LTD</li>
-                                    <li class="read-more"><a href="#" class="btn">Read more</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <a href="#"><img src="__IMG__/portfolio6.jpg" alt="Project Name"></a>
-                            </div>
-                            <div class="portfolio-info-fade">
-                                <ul>
-                                    <li class="portfolio-project-name">Project Name</li>
-                                    <li>Website design & Development</li>
-                                    <li>Client: Some Client LTD</li>
-                                    <li class="read-more"><a href="#" class="btn">Read more</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <volist name="detail" id="detail">
+                        <h4 style="text-indent:35px;line-height: 25px">
+                           ({++$index})&nbsp;{$detail.publish_shortcut}
+                            <a href="">详细</a>
+                        </h4>
+                    </volist>
                 </div>
                 <!-- End Related Projects -->
             </div>

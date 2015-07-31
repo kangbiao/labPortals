@@ -38,6 +38,15 @@ class NavController extends HomeController {
 
     public function publish()
     {
+        $publishCategory=R("Article/category",array('id'=>'publish'));
+        $Document = D('Document');
+        $list=$Document->lists($publishCategory['id']);
+        foreach($list as $v)
+        {
+            $detail[]=$Document->detail($v['id']);
+        }
+//        dump($detail);
+        $this->assign('detail',$detail);
         $this->display();
     }
 
