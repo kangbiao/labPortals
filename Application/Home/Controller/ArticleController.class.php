@@ -43,8 +43,8 @@ class ArticleController extends HomeController {
 		$this->assign('category', $category);
 		$this->assign('list', $list);
 //		dump($category);
-//		dump($list);
-		$this->display($category['template_lists']);
+		dump($list);
+//		$this->display($category['template_lists']);
 	}
 
 	/* 文档模型详情页 */
@@ -85,8 +85,7 @@ class ArticleController extends HomeController {
 		$this->assign('category', $category);
 		$this->assign('info', $info);
 		$this->assign('page', $p); //页码
-		dump($info);
-//		$this->display($tmpl);
+		$this->display("Public/detail");
 	}
 
 	/* 文档分类检测 */

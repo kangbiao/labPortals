@@ -1,0 +1,28 @@
+<extend name="Public/common"/>
+
+<block name="body">
+    <!-- Page Title -->
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+
+                <!-- Blog Post -->
+                <div class="col-sm-12">
+                    <div class="blog-post blog-single-post">
+                        <div class="single-post-title">
+                            <h2>{$info.title}</h2>
+                        </div>
+                        <div class="single-post-info">
+                            <i class="glyphicon glyphicon-time"></i>{$info.update_time|date='Y-m-d H:i:s',###}
+                        </div>
+                        <div class="single-post-content">
+                            {$info.content}
+                        </div>
+                    </div>
+                </div>
+                <!-- End Blog Post -->
+            </div>
+        </div>
+    </div>
+</block>
