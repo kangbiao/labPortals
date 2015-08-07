@@ -36,7 +36,7 @@ class NavController extends HomeController {
         foreach($topFourNewsList as $k=>$v)
         {
             if($v['cover_id']>0)
-                $topFourNewsList[$k]['coverPath']="/onethink".M("Picture")->where("id=".$v['cover_id'])->getField("path");
+                $topFourNewsList[$k]['coverPath']=__ROOT__.M("Picture")->where("id=".$v['cover_id'])->getField("path");
             else
                 $topFourNewsList[$k]['coverPath']=0;
             unset($topFourNewsList[$k]['cover_id']);
@@ -48,7 +48,7 @@ class NavController extends HomeController {
         foreach($sliderThreeNewsList as $k=>$v)
         {
             if($v['cover_id']>0)
-                $sliderThreeNewsList[$k]['coverPath']="/onethink".M("Picture")->where("id=".$v['cover_id'])->getField("path");
+                $sliderThreeNewsList[$k]['coverPath']=__ROOT__.M("Picture")->where("id=".$v['cover_id'])->getField("path");
             else
                 $sliderThreeNewsList[$k]['coverPath']=0;
             unset($sliderThreeNewsList[$k]['cover_id']);

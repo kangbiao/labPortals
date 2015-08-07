@@ -95,7 +95,7 @@ class DocumentModel extends Model{
         }
         if(isset($detail['header_img']))
         {
-            $detail['header_img']="/onethink".M('Picture')->where("id=".$detail['header_img'])->getField("path");
+            $detail['header_img']=__ROOT__.M('Picture')->where("id=".$detail['header_img'])->getField("path");
         }
 
         return array_merge($info, $detail);
