@@ -58,7 +58,6 @@ class NavController extends HomeController {
         $researchCateID=R("Article/category",array('id'=>'research_forward'));
         $map['category_id']=$researchCateID['id'];
         $researchList=$Document->where($map)->order($order)->limit(3)->select();
-
 //        dump($sliderThreeNewsList);
 //        dump($researchList);
 //        dump($topFourNewsList);
@@ -77,7 +76,6 @@ class NavController extends HomeController {
         {
             $list["research"][]=$Document->detail($v['id']);
         }
-
         $patent=R("Article/category",array('id'=>'onlyOneDoc'));
         $temp=$Document->lists($patent['id']);
         foreach($temp as $v)

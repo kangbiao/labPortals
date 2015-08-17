@@ -27,6 +27,12 @@ class ArticleController extends HomeController {
 		$this->display($category['template_index']);
 	}
 
+	public function search($word)
+	{
+		$result=D('Document')->where("title LIKE('%{$word}%')")->select();
+		dump($result);
+	}
+
 	/* 文档模型列表页 */
 	public function lists($p = 1){
 		/* 分类信息 */

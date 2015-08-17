@@ -29,7 +29,7 @@
 			<neq name="model_id" value="$vo"><a href="{:U('index',array('pid'=>$pid,'cate_id'=>$cate_id,'model_id'=>$vo))}">{$vo|get_document_model='title'}</a><else/><strong>{$vo|get_document_model='title'}</strong></neq>&nbsp;
 			</volist>
 		]</if>
-		<notempty name="groups">[ 备注:
+		<notempty name="groups">[ 分组:
 			<foreach name="groups" item="vo">
 			<neq name="group_id" value="$key"><a href="{:U('index',array('pid'=>$pid,'cate_id'=>$cate_id,'model_id'=>$model_id,'group_id'=>$key))}">{$vo}</a><else/>{$vo}</neq>&nbsp;
 			</foreach>

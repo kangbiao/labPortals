@@ -95,4 +95,8 @@ return array(
         'callback' => false, //检测文件是否存在回调函数，如果存在返回文件信息数组
     ), //附件上传配置（文件上传类配置）
 
+    'LANG_SWITCH_ON' => true,
+    'LANG_AUTO_DETECT'=>true,
+    'LANG_LIST'=>'zh-cn,en',
+    'DEFAULT_LANG'=>'zh-cn',
 );

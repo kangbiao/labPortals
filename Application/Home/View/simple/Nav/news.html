@@ -20,7 +20,7 @@
 
                                     </div>
                                     <p align="right" style="border-bottom: 1px #D5D5D5 solid;">
-                                        <font color="grey">发布时间:{$list.update_time|date='Y-m-d H:i:s',###}&nbsp;&nbsp;浏览量:{$list.view}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <font color="grey">{:L('PUB_TIME')}:{$list.update_time|date='Y-m-d H:i:s',###}&nbsp;&nbsp;{:L('VIEWS')}:{$list.view}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         </font>
                                     </p>
                                 </li>
@@ -39,7 +39,7 @@
                 <!-- Sidebar -->
                 <div class="col-sm-2 blog-sidebar">
                     <br/>
-                    <h4>目录列表</h4>
+                    <h4>{:L('CATEGORY')}</h4>
                     <ul class="blog-categories">
                         <volist name="category" id="category">
                             <li><a href="{:U('nav/news?category='.$category['name'])}">{$category.title}</a></li>

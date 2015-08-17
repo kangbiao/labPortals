@@ -12,10 +12,10 @@
                         <h2 class="title">{$indexNews.title}</h2>
                         <!-- Slide Text -->
                         <h3 class="subtitle">{$indexNews.description}
-                            <a href="{:U('Article/detail','id='.$indexNews['id'])}" style="font-size: 0.8em">更多...</a>
+                            <a href="{:U('Article/detail','id='.$indexNews['id'])}" style="font-size: 0.8em">{:L('LOOK_MORE')}...</a>
                         </h3>
                         <!-- Slide Image -->
-                        <img class="slide-img" src="{$indexNews.coverPath}" alt="{$indexNews.title}"/>
+                        <img class="slide-img" height="100px" src="{$indexNews.coverPath}" alt="{$indexNews.title}"/>
                     </li>
                 </volist>
                  <!--End Slide 3-->
@@ -34,7 +34,7 @@
     <!-- 研究方向 -->
     <div class="section">
         <div class="container">
-            <h2>研究方向<a style="font-size: 18px; float: right" href="research.html">查看更多...</a></h2>
+            <h2>{:L('RESEARCH_FORWARD')}<a style="font-size: 18px; float: right" href="research.html">{:L('LOOK_MORE')}...</a></h2>
             <div class="row">
                 <volist name="indexResearch" id="indexResearch">
                     <div class="col-md-4 col-sm-6">
@@ -43,7 +43,7 @@
                             <h3>{$indexResearch.title}</h3>
 
                             <p>{$indexResearch.description}</p>
-                            <a href="#" class="btn">Read more</a>
+                            <a href="research.html#{$indexResearch.title}" class="btn">{:L('LOOK_MORE')}</a>
                         </div>
                     </div>
                 </volist>
@@ -55,7 +55,7 @@
     <!-- 新闻列表 -->
     <div class="section blog-posts-wrapper">
         <div class="container">
-            <h2>最新新闻 <a style="font-size: 18px; float: right" href="news.html">查看更多...</a></h2>
+            <h2>{:L('NEWEST_NEWS')}<a style="font-size: 18px; float: right" href="news.html">{:L('LOOK_MORE')}...</a></h2>
             <div class="row">
                 <volist name="topFourNewsList" id="topFourNewsList">
                     <div class="col-md-3 col-sm-6">
@@ -69,7 +69,7 @@
                                 <eq name="topFourNewsList['coverPath']" value="0">
                                     <img style="height: 190px;" src="__IMG__/blog2.jpg" class="post-image" alt="Post Title">
                                     <else/>
-                                    <img style="height: 190px;" src="{$topFourNewsList.coverPath}" class="post-image" alt="图片加载失败">
+                                    <img style="height: 190px;" src="{$topFourNewsList.coverPath}" class="post-image" alt="{:L('IMG_LOAD_ERROR')}">
                                 </eq>
                                 <div class="post-title">
                                     <h3>{$topFourNewsList.title}</h3>

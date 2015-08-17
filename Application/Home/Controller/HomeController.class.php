@@ -38,4 +38,13 @@ class HomeController extends Controller {
 		is_login() || $this->error('您还没有登录，请先登录！', U('User/login'));
 	}
 
+	public function cookie($value)
+	{
+		if(in_array($value,array("zh-cn","en")))
+			cookie("think_language",$value);
+		else
+			cookie("think_language","zh-cn");
+		$this->redirect('Nav/index');
+	}
+
 }

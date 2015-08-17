@@ -5,7 +5,7 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                <h2>教师团队</h2>
+                <h2>{:L('TEACHER_TEAM')}</h2>
                 <volist name="detail['teacher']" id="teacher" empty="$empty">
                     <eq name="teacher['show_introduction']" value="1">
                         <div class="col-md-12 col-sm-6">
@@ -18,17 +18,17 @@
                                             <ul>
                                                 <!-- Team Member Info & Social Links -->
                                                 <li class="team-member-name">
-                                                    姓名：{$teacher.title}
+                                                    {:L('NAME')}：{$teacher.title}
                                                 </li>
-                                                <li>研究方向：{$teacher.research_forward}</li>
-                                                <li>联系方式：{$teacher.contact}</li>
+                                                <li>{:L('RESEARCH_FORWARD')}：{$teacher.research_forward}</li>
+                                                <li>{:L('CONTACT')}：{$teacher.contact}</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="portfolio-item-description col-sm-">
                                     <div style="margin:20px ">
-                                        <h3>个人简介</h3>
+                                        <h3>{:L('SELF_INTRO')}</h3>
                                         <p>{$teacher.introduction}</p>
                                     </div>
                                 </div>
@@ -44,10 +44,10 @@
                                     <ul>
                                         <!-- Team Member Info & Social Links -->
                                         <li class="team-member-name">
-                                            姓名：{$teacher.title}
+                                            {:L('NAME')}：{$teacher.title}
                                         </li>
-                                        <li>研究方向：{$teacher.research_forward}</li>
-                                        <li>联系方式：{$teacher.contact}</li>
+                                        <li>{:L('RESEARCH_FORWARD')}：{$teacher.research_forward}</li>
+                                        <li>{:L('CONTACT')}：{$teacher.contact}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="row">
                 <!-- Team Member -->
-                <h2>学生团队</h2>
+                <h2> {:L('STUDENT_TEAM')}</h2>
 
                 <volist name="detail['student']" id="student" empty="$empty">
                     <div class="col-md-4 col-sm-6">
@@ -69,10 +69,10 @@
                                 <ul>
                                     <!-- Team Member Info & Social Links -->
                                     <li class="team-member-name">
-                                        姓名：{$student.title}
+                                        {:L('NAME')}：{$student.title}
                                     </li>
-                                    <li>研究方向：{$student.research_forward}</li>
-                                    <li>联系方式：{$student.contact}</li>
+                                    <li>{:L('RESEARCH_FORWARD')}：{$student.research_forward}</li>
+                                    <li>{:L('CONTACT')}：{$student.contact}</li>
                                 </ul>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                 <!-- End Team Member -->
             </div>
             <div class="row">
-                <h2>已毕业学生</h2>
+                <h2> {:L('GRADUATED_STUDENT')}</h2>
                 <volist name="detail['graduated_stu']" id="graduated_stu" empty="$empty">
                     <div class="col-md-4 col-sm-6">
 
@@ -92,9 +92,9 @@
                                 <ul>
                                     <!-- Team Member Info & Social Links -->
                                     <li class="team-member-name">
-                                        姓名：{$graduated_stu.title}
+                                        {:L('NAME')}：{$graduated_stu.title}
                                     </li>
-                                    <li>去向：{$graduated_stu.where}</li>
+                                    <li>{:L('WHERE')}：{$graduated_stu.where}</li>
                                 </ul>
                             </div>
                         </div>

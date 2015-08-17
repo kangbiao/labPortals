@@ -5,13 +5,13 @@
         <div class="container">
             <div class="row">
                 <!-- Related Projects -->
-                <h2>出版物</h2>
+                <h2>{:L('PUBLISH')}</h2>
 
                 <div class="row">
                     <volist name="detail" id="detail">
                         <h4 style="text-indent:35px;line-height: 25px">
                            ({++$index})&nbsp;{$detail.publish_shortcut}
-                            <a href="">详细</a>
+                            <a href="">{:L('DETAIL')}</a>
                         </h4>
                     </volist>
                 </div>

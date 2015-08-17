@@ -12,34 +12,59 @@
                 <ul>
                     <li>
                         <div class="dropdown choose-country">
-                            <a class="#" data-toggle="dropdown" href="#"><img src="__IMG__/flags/switch.png" alt="Great Britain"> 切换语言</a>
+                            <a class="#" data-toggle="dropdown" href="#"><img src="__IMG__/flags/switch.png" alt="{:L('IMG_LOAD_ERROR')}">&nbsp;&nbsp;{:L('SWITCH_LANG')}</a>
                             <ul class="dropdown-menu" role="menu">
-                                <li role="menuitem"><a href="#"><img src="__IMG__/flags/cn.png" alt="Germany"> 中文</a></li>
-                                <li role="menuitem"><a href="#"><img src="__IMG__/flags/gb.png" alt="Germany"> English</a></li>
+                                <li role="menuitem"><a id="zh-cn" href="{:U('home/cookie','value=zh-cn')}"><img src="__IMG__/flags/cn.png" alt="Germany"> 中文</a></li>
+                                <li role="menuitem"><a id="en" href="{:U('home/cookie','value=en')}"><img src="__IMG__/flags/gb.png" alt="Germany"> English</a></li>
                             </ul>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-        <nav id="mainmenu" class="mainmenu">
+        <nav class="mainmenu" id="mainmenu">
             <ul>
-                <li class="logo-wrapper"><a href="{:U('Nav/index')}"><img src="__IMG__/logo.png" alt="Multipurpose Twitter Bootstrap Template"></a>
+                <li class="logo-wrapper"><a href="/onethink/Nav/index.html"><img alt="{:L('IMG_LOAD_ERROR')}" src="/onethink/Public/Home/img/logo.png"></a>
                 </li>
-                <think:nav name="nav">
-                    <eq name="nav.pid" value="0">
-                        <li>
-                            <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
-                        </li>
-                    </eq>
-                </think:nav>
                 <li>
-                    <form action="">
-                        <input type="text" style="width:120px;border: 1px solid #ccc;" class="input-sm" name="" id="">
-                        <button type="button" class="btn btn-sm">Search</button>
-                    </form>
-                </li>
+                    <a target="_self" href="/onethink/nav/research.html">{:L('NAV_RESEARCH')}</a>
+                </li><li>
+                <a target="_self" href="/onethink/nav/publish.html">{:L('NAV_PUBLISH')}</a>
+            </li><li>
+                <a target="_self" href="/onethink/nav/news.html">{:L('NAV_NEWS')}</a>
+            </li><li>
+                <a target="_self" href="/onethink/nav/members.html">{:L('NAV_MEMBER')}</a>
+            </li><li>
+                <a target="_self" href="/onethink/nav/about.html">{:L('NAV_ABOUT')}</a>
+            </li><li>
+                <a target="_self" href="/onethink/nav/contact.html">{:L('NAV_CONTACT')}</a>
+            </li>                <li>
+                <form action="">
+                    <input type="text" id="" name="" class="input-sm" style="width:120px;border: 1px solid #ccc;">
+                    <button class="btn btn-sm" type="button">{:L('SEARCH')}</button>
+                </form>
+            </li>
             </ul>
         </nav>
+        <!--<nav id="mainmenu" class="mainmenu">-->
+            <!-- -->
+            <!--<ul>-->
+                <!--<li class="logo-wrapper"><a href="{:U('Nav/index')}"><img src="__IMG__/logo.png" alt="Multipurpose Twitter Bootstrap Template"></a>-->
+                <!--</li>-->
+                <!--<think:nav name="nav">-->
+                    <!--<eq name="nav.pid" value="0">-->
+                        <!--<li>-->
+                            <!--<a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>-->
+                        <!--</li>-->
+                    <!--</eq>-->
+                <!--</think:nav>-->
+                <!--<li>-->
+                    <!--<form action="">-->
+                        <!--<input type="text" style="width:120px;border: 1px solid #ccc;" class="input-sm" name="" id="">-->
+                        <!--<button type="button" class="btn btn-sm">{:L('SEARCH')}</button>-->
+                    <!--</form>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</nav>-->
     </div>
 </div>
