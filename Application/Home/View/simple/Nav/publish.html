@@ -6,14 +6,28 @@
             <div class="row">
                 <!-- Related Projects -->
                 <h2>{:L('PUBLISH')}</h2>
-
                 <div class="row">
+                    <div class="col-md-2">
+                        <table class="table">
+                            <volist name="yearMonth" id="yearMonth" mod="2">
+                                <eq name="mod" value="0">
+                                    <tr>
+                                    <td style="border: none;"><a href="#{$yearMonth}">{$yearMonth}</a></td>
+                                 <else/>
+                                    <td style="border: none;"><a href="#{$yearMonth}">{$yearMonth}</a></td>
+                                    </tr>
+                                </eq>
+                            </volist>
+                        </table>
+                    </div>
+                    <div class="col-md-10">
                     <volist name="detail" id="detail">
-                        <h4 style="text-indent:35px;line-height: 25px">
-                           ({++$index})&nbsp;{$detail.publish_shortcut}
+                        <h4 id="{$detail.create_time}" style="text-indent:35px;line-height: 25px">
+                           ({++$index})&nbsp;{$detail.publish_shortcut}({$detail.create_time})
                             <a href="">{:L('DETAIL')}</a>
                         </h4>
                     </volist>
+                    </div>
                 </div>
                 <!-- End Related Projects -->
             </div>

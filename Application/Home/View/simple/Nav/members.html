@@ -34,7 +34,10 @@
                                 </div>
                             </div>
                         </div>
-                        <else/>
+                    </eq>
+                </volist>
+                <volist name="detail['teacher']" id="teacher" empty="$empty">
+                    <eq name="teacher['show_introduction']" value="0">
                         <div class="col-md-4 col-sm-6">
 
                             <div class="team-member">

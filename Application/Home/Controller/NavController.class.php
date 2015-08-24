@@ -30,7 +30,10 @@ class NavController extends HomeController {
             $map['category_id']=$ids;
         else
             $map['category_id']=array('in',str2arr($ids));
-
+        if(cookie("think_language")=="en")
+            $map['group_id']=1;
+        else
+            $map['group_id']=0;
         //获取最新的四条新闻在首页显示
         $topFourNewsList=$Document->where($map)->order($order)->limit(4)->select();
         foreach($topFourNewsList as $k=>$v)
@@ -71,7 +74,15 @@ class NavController extends HomeController {
     {
         $research=R("Article/category",array('id'=>'research_forward'));
         $Document = D('Document');
-        $temp=$Document->lists($research['id']);
+
+        $map['pid']=0;
+        $map['status']=1;
+        $map['category_id']=$research['id'];
+        if(cookie("think_language")=="en")
+            $map['group_id']=1;
+        else
+            $map['group_id']=0;
+        $temp=$Document->where($map)->order("create_time DESC")->select();
         foreach($temp as $v)
         {
             $list["research"][]=$Document->detail($v['id']);
@@ -83,6 +94,7 @@ class NavController extends HomeController {
             if($v['title']=="patent")
                 $list['patent']=$Document->detail($v['id']);
         }
+//        dump($list);
         $this->assign("list",$list);
         $this->display();
     }
@@ -91,11 +103,24 @@ class NavController extends HomeController {
     {
         $publishCategory=R("Article/category",array('id'=>'publish'));
         $Document = D('Document');
-        $list=$Document->lists($publishCategory['id']);
+
+        $map['pid']=0;
+        $map['status']=1;
+        $map['category_id']=$publishCategory['id'];
+        if(cookie("think_language")=="en")
+            $map['group_id']=1;
+        else
+            $map['group_id']=0;
+        $list=$Document->where($map)->order("create_time DESC")->select();
         foreach($list as $v)
         {
-            $detail[]=$Document->detail($v['id']);
+            $temp=$Document->detail($v['id']);
+            $temp["create_time"]=date("Y-m",$temp["create_time"]);
+            $yearMonth[]=$temp["create_time"];
+            $detail[]=$temp;
         }
+        arsort($yearMonth);
+        $this->assign("yearMonth",$yearMonth);
         $this->assign('detail',$detail);
         $this->display();
     }
@@ -110,29 +135,48 @@ class NavController extends HomeController {
         $category = D('Category')->getTree("news",$field);
         $category=$category["_"];
 
+        $map['pid']=0;
+        $map['status']=1;
+        if(cookie("think_language")=="en")
+        {
+            $prevPage = "Previous";
+            $nextPage = "Next";
+            $langall="All&nbsp;";
+            $langpage="&nbsp;Tatols";
+            $map['group_id'] = 1;
+        }
+        else
+        {
+            $prevPage = "上一页";
+            $nextPage = "下一页";
+            $langall="共";
+            $langpage="页";
+            $map['group_id'] = 0;
+        }
 
         if(isset($_GET['category'])&&$_GET['category']!="")
         {
             $categoryinfo =R("Article/category",array('id'=>I('get.category')));
-            $list=$Document->lists($categoryinfo['id']);
+            $map['category_id']=$categoryinfo['id'];
+            $list=$Document->where($map)->order("create_time DESC")->select();
             $num=sizeof($list);
             $end=ceil($num/$pagesize);
             echo $end;
             if($p==1)
-                $prev="<li class='disabled'><a href='#'>上一页</a></li>";
+                $prev="<li class='disabled'><a href='#'>".$prevPage."</a></li>";
             elseif($p>1)
             {
                 $prevp=$p-1;
-                $prev = "<li><a href='" . U('Nav/news', 'category=' . $categoryURL . '&p=' . $prevp ). "'>上一页</a></li>";
+                $prev = "<li><a href='" . U('Nav/news', 'category=' . $categoryURL . '&p=' . $prevp ). "'>".$prevPage."</a></li>";
             }
             if($p==$end)
-                $next="<li class='disabled'><a href='#'>下一页</a></li>";
+                $next="<li class='disabled'><a href='#'>".$nextPage."</a></li>";
             elseif($p<$end)
             {
                 $nextp=$p+1;
-                $next="<li><a href='".U('Nav/news','category='.$categoryURL.'&p='.$nextp)."'>下一页</a></li>";
+                $next="<li><a href='".U('Nav/news','category='.$categoryURL.'&p='.$nextp)."'>".$nextPage."</a></li>";
             }
-            $list=$Document->page($p, $pagesize)->lists($categoryinfo['id']);
+            $list=$Document->page($p, $pagesize)->where($map)->order("create_time DESC")->select();
         }
         else
         {
@@ -146,26 +190,30 @@ class NavController extends HomeController {
                     $ids=$ids.",".$v['id'];
                 $count=1;
             }
-            $list=$Document->lists($ids);
+            if(is_numeric($ids))
+                $map['category_id']=$ids;
+            else
+                $map['category_id']=array('in',str2arr($ids));
+            $list=$Document->where($map)->order("create_time DESC")->select();
             $num=sizeof($list);
             $end=ceil($num/$pagesize);
             if($p==1)
-                $prev="<li class='disabled'><a href='#'>上一页</a></li>";
+                $prev="<li class='disabled'><a href='#'>".$prevPage."</a></li>";
             elseif($p>1)
             {
                 $prevp=$p-1;
-                $prev = "<li><a href='" . U('Nav/news', 'category=' . $categoryURL . '&p=' . $prevp ). "'>上一页</a></li>";
+                $prev = "<li><a href='" . U('Nav/news', 'category=' . $categoryURL . '&p=' . $prevp ). "'>".$prevPage."</a></li>";
             }
             if($p==$end)
-                $next="<li class='disabled'><a href='#'>下一页</a></li>";
+                $next="<li class='disabled'><a href='#'>".$nextPage."</a></li>";
             elseif($p<$end)
             {
                 $nextp=$p+1;
-                $next="<li><a href='".U('Nav/news','category='.$categoryURL.'&p='.$nextp)."'>下一页</a></li>";
+                $next="<li><a href='".U('Nav/news','category='.$categoryURL.'&p='.$nextp)."'>".$nextPage."</a></li>";
             }
-            $list=$Document->page($p, $pagesize)->lists($ids);
+            $list=$Document->page($p, $pagesize)->where($map)->order("create_time DESC")->select();
         }
-        $this->assign("pagearea",$prev.$next."<li><a href='#'>共".$end."页</a></li>");
+        $this->assign("pagearea",$prev.$next."<li><a href='#'>".$langall.$end.$langpage."</a></li>");
         $this->assign("list",$list);
         $this->assign("category",$category);
         $this->display();
@@ -179,9 +227,19 @@ class NavController extends HomeController {
         $categoryTeacher=R("Article/category",array('id'=>'teacher'));
 
         $Document = D('Document');
-        $list['Teacher']=$Document->lists($categoryTeacher['id']);
-        $list['Student'] = $Document->lists($categoryStudent['id']);
-        $list['Graduated_stu']=$Document->lists($categoryGraduated_stu['id']);
+
+        $map['pid']=0;
+        $map['status']=1;
+        if(cookie("think_language")=="en")
+            $map['group_id']=1;
+        else
+            $map['group_id']=0;
+        $map['category_id']=$categoryTeacher['id'];
+        $list['Teacher']=$Document->where($map)->order("create_time DESC")->select();
+        $map['category_id']=$categoryStudent['id'];
+        $list['Student'] = $Document->where($map)->order("create_time DESC")->select();
+        $map['category_id']=$categoryGraduated_stu['id'];
+        $list['Graduated_stu']=$Document->where($map)->order("create_time DESC")->select();
 
         //开始获取每个成员的详细信息
         foreach($list['Teacher'] as $k=>$v)
@@ -199,7 +257,6 @@ class NavController extends HomeController {
 
         $this->assign('detail',$detail);
         $this->assign('empty',"<h4>暂没有相关成员信息</h4>");
-//        dump($detail);
         $this->display();
     }
 
@@ -208,7 +265,15 @@ class NavController extends HomeController {
         $researchPatent=R("Article/category",array('id'=>'onlyOneDoc'));
 
         $Document = D('Document');
-        $temp=$Document->lists($researchPatent['id']);
+
+        $map['pid']=0;
+        $map['status']=1;
+        if(cookie("think_language")=="en")
+            $map['group_id']=1;
+        else
+            $map['group_id']=0;
+        $map['category_id']=$researchPatent['id'];
+        $temp=$Document->where($map)->order("create_time DESC")->select();
         foreach($temp as $v)
         {
             if($v['title']=="about")
@@ -222,7 +287,15 @@ class NavController extends HomeController {
         $researchPatent=R("Article/category",array('id'=>'onlyOneDoc'));
 
         $Document = D('Document');
-        $temp=$Document->lists($researchPatent['id']);
+
+        $map['pid']=0;
+        $map['status']=1;
+        if(cookie("think_language")=="en")
+            $map['group_id']=1;
+        else
+            $map['group_id']=0;
+        $map['category_id']=$researchPatent['id'];
+        $temp=$Document->where($map)->order("create_time DESC")->select();
         foreach($temp as $v)
         {
             if($v['title']=="contact")
