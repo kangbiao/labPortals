@@ -12,6 +12,7 @@ return array(
     'NAV_MEMBER'=>'成员信息',
     'NAV_ABOUT'=>'关于我们',
     'NAV_CONTACT'=>'联系我们',
+    'NAV_BIO'=>'向勇老师',
 
     'SWITCH_LANG'=>'切换语言',
     'SEARCH'=>'搜索',

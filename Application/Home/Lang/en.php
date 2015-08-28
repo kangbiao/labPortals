@@ -12,6 +12,7 @@ return array(
     'NAV_MEMBER'=>'MEMBER',
     'NAV_ABOUT'=>'ABOUT',
     'NAV_CONTACT'=>'CONTACT',
+    'NAV_BIO'=>'BIO',
 
     'SWITCH_LANG'=>'Language',
     'SEARCH'=>'Go!',

@@ -88,7 +88,9 @@ class NavController extends HomeController {
             $list["research"][]=$Document->detail($v['id']);
         }
         $patent=R("Article/category",array('id'=>'onlyOneDoc'));
-        $temp=$Document->lists($patent['id']);
+        $map['category_id']=$patent['id'];
+        $temp=$Document->where($map)->order("create_time DESC")->select();
+//        lists($patent['id']);
         foreach($temp as $v)
         {
             if($v['title']=="patent")
@@ -215,6 +217,13 @@ class NavController extends HomeController {
         }
         $this->assign("pagearea",$prev.$next."<li><a href='#'>".$langall.$end.$langpage."</a></li>");
         $this->assign("list",$list);
+        if(cookie("think_language")=="en")
+        {
+            foreach($category as $k=>$v)
+            {
+                $category[$k]['title']=$category[$k]['name'];
+            }
+        }
         $this->assign("category",$category);
         $this->display();
     }
@@ -299,6 +308,29 @@ class NavController extends HomeController {
         foreach($temp as $v)
         {
             if($v['title']=="contact")
+                $list=$Document->detail($v['id']);
+        }
+        $this->assign("list",$list);
+        $this->display();
+    }
+
+    public function bio()
+    {
+        $researchPatent=R("Article/category",array('id'=>'onlyOneDoc'));
+
+        $Document = D('Document');
+
+        $map['pid']=0;
+        $map['status']=1;
+        if(cookie("think_language")=="en")
+            $map['group_id']=1;
+        else
+            $map['group_id']=0;
+        $map['category_id']=$researchPatent['id'];
+        $temp=$Document->where($map)->order("create_time DESC")->select();
+        foreach($temp as $v)
+        {
+            if($v['title']=="bio")
                 $list=$Document->detail($v['id']);
         }
         $this->assign("list",$list);

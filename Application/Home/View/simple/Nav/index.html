@@ -38,7 +38,7 @@
             <div class="row">
                 <volist name="indexResearch" id="indexResearch">
                     <div class="col-md-4 col-sm-6">
-                        <div class="service-wrapper">
+                        <div class="service-wrapper" style="height: 200px">
 
                             <h3>{$indexResearch.title}</h3>
 
@@ -67,9 +67,9 @@
                                     </div>
                                 </div>
                                 <eq name="topFourNewsList['coverPath']" value="0">
-                                    <img style="height: 190px;" src="__IMG__/blog2.jpg" class="post-image" alt="Post Title">
+                                    <img style="height: 180px;" src="__IMG__/blog2.jpg" class="post-image" alt="Post Title">
                                     <else/>
-                                    <img style="height: 190px;" src="{$topFourNewsList.coverPath}" class="post-image" alt="{:L('IMG_LOAD_ERROR')}">
+                                    <img style="height: 180px;" src="{$topFourNewsList.coverPath}" class="post-image" alt="{:L('IMG_LOAD_ERROR')}">
                                 </eq>
                                 <div class="post-title">
                                     <h3>{$topFourNewsList.title}</h3>
